@@ -1,10 +1,11 @@
 import React, { ReactElement } from 'react'
 
-type SupportedTags = 'strong' | 'em' | 'span'
+type SupportedTags = 'strong' | 'em' | 'del' | 'span' 
 
 const tags: Map<string, SupportedTags> = new Map()
 tags.set('*', 'strong') // bold
 tags.set('_', 'em') // italic
+tags.set('~', 'del') // strike through
 
 const pushContent = (
   parsedContent: Array<ReactElement | string>,
